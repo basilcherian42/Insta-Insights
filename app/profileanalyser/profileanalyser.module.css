@@ -1,0 +1,88 @@
+.heading {
+  font-family: var(--font-family);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+.output_aurora {
+  font-family: var(--font-family); /* Set the font family for the entire page */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  animation: aurora 10s infinite;
+}
+
+
+/* profileanalyser.module.css */
+.slide_down {
+  transition: height 0.5s ease-in-out;
+  height: auto;
+}
+
+.slide_up {
+  transition: height 0.5s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+
+
+@keyframes aurora {
+  0% {
+    color: #f16969; /* Red */
+  }
+  25% {
+    color: #e897e8; /* Magenta */
+  }
+  50% {
+    color: #8181ec; /* Blue */
+  }
+  75% {
+    color: #87ecec; /* Cyan */
+  }
+  100% {
+    color: #a5eda5; /* Green */
+  }
+}
+.gradient__bg {
+  /* ff 3.6+ */
+  min-height: 100vh;
+  background-size: cover;
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+}
+

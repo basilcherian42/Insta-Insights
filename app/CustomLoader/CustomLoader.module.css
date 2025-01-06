@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(151, 162, 209, 0.5); /* Transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Add a glassy effect */
+}
+
+.modal {
+  font-family: var(--font-family);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Semi-transparent white background */
+  font-weight: 700;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-in-out;
+  z-index: 1001; /* Ensure the modal is above the overlay */
+}
+
+@keyframes text-pop {
+  from {
+    transform: scale(1); /* Start at normal size */
+  }
+  to {
+    transform: scale(1.05); /* Briefly scale up on hover */
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

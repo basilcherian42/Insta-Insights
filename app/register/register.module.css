@@ -1,0 +1,236 @@
+/*@apply is written so that we can 
+use tailwind css*/
+
+.imgStyle {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 rounded-l-md;
+  position: relative;
+  overflow: hidden;
+}
+
+.cartoonImg {
+  background: url("/img2.png") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  z-index: 0;
+}
+
+.cloud_one {
+  background: url("/cloud_1.png") no-repeat;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  width: 120px;
+  height: 100px;
+  background-size: contain;
+  z-index: 1;
+  transform: translateX(290%);
+  animation: cloud_one 27s ease-in 5.9s infinite;
+}
+.cloud_two {
+  background: url("/cloud_2.png") no-repeat;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 120px;
+  height: 100px;
+  background-size: contain;
+  transform: translateX(290%);
+  z-index: -1;
+  animation: cloud_two 20s linear 0.9s infinite;
+}
+
+/* animation for clouds*/
+@keyframes cloud_one {
+  0% {
+    transform: translateX(290%); /* Start from the right side */
+  }
+  100% {
+    transform: translateX(-260%); /* Return to the right side */
+  }
+}
+@keyframes cloud_two {
+  0% {
+    transform: translateX(290%); /* Start from the right side */
+  }
+  100% {
+    transform: translateX(-250%); /* Return to the right side */
+  }
+}
+
+.gradient__bg {
+  /* ff 3.6+ */
+  min-height: 100vh;
+  background-size: cover;
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(26, 2, 63, 1) 71%,
+    rgba(120, 3, 97, 1) 99%
+  );
+}
+
+@media (min-width: 640px) {
+  .cartoonImg {
+    background-position: top center; /* Align image to the top for screens wider than 640px */
+  }
+  .cloud_one {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+  .cloud_two {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+}
+
+@media (min-width: 768px) {
+  .cartoonImg {
+    background-position: top center; /* Align image to the top for screens wider than 768px */
+  }
+  .cloud_one {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+  .cloud_two {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .cartoonImg {
+    background-position: center center; /* Center the background image for screens wider than 1024px */
+  }
+  .cloud_one {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+  .cloud_two {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+}
+
+@media (min-width: 1280px) {
+  .cartoonImg {
+    background-position: center center; /* Center the background image for screens wider than 1280px */
+  }
+  .cloud_one {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+  .cloud_two {
+    background-position: center center; /* Align image to the top for screens wider than 640px */
+  }
+}
+
+/*register form CSS*/
+.register_section {
+  font-family: var(--font-family);
+  padding: 0.5rem;
+  margin: 0.4rem;
+  border-radius: 15px; /* Border radius */
+  color: #fff;
+}
+
+.register_title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+}
+.register_input {
+  color: black;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+.register_input span {
+  position: absolute; /* Make span absolute relative to its container */
+  right: 10px; /* Position 10px from the right edge */
+  top: 50%; /* Center vertically (adjust as needed) */
+  transform: translateY(
+    -50%
+  ); /* Offset vertical position due to absolute positioning */
+}
+.register_button {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  background-color: #5f20b1; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.register_button:hover {
+  background-color: #45a049; /* Button hover background color */
+}
+
+.register_signup {
+  color: #fff; /* Text color */
+  margin-top: 20px; /* Add some space between form and signup link */
+}
+
+.register_signup a {
+  color: #4caf50; /* Link color */
+  text-decoration: none;
+}
+
+.register_signup a:hover {
+  text-decoration: underline; /* Underline link on hover */
+}
+
+.register_input_icon {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem; /* Equivalent to px-4 in Tailwind */
+  padding-right: 1rem; /* Equivalent to px-4 in Tailwind */
+}
+
+.register_input_icon span {
+  width: 1.5rem; /* Equivalent to w-6 in Tailwind */
+  height: 1.5rem; /* Equivalent to h-6 in Tailwind */
+  color: #718096; /* Equivalent to text-gray-400 in Tailwind */
+}

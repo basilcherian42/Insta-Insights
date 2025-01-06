@@ -1,0 +1,82 @@
+/* styles.css */
+
+.car-container {
+  display: grid; /* Use grid layout for better alignment */
+  grid-template-columns: repeat(
+    1,
+    1fr
+  ); /* Set one column to occupy the whole width */
+  gap: 20px; /* Add gap between items */
+  font-family: var(--font-family);
+}
+
+.car-card {
+  width: 100vh;
+  height: 80vh; /* Use 100% height instead of 100vh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(215, 47, 47, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front,
+.card-back {
+  width: 100vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  color: #333;
+  background-color: #000000;
+  border: 1px solid #7a17e3;
+  padding: 20px; /* Add padding to the back side */
+  border-radius: 10px; /* Add border radius to the back side */
+}
+
+.car-card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.front-content {
+  text-align: center;
+}
+
+.front-content h2 {
+  margin-bottom: 10px; /* Add spacing below the heading */
+  color: #ffffff;
+  font-size: 1.5rem; /* Adjust heading font size */
+}
+
+.description p {
+  color: #ffffff;
+  font-size: 1rem; /* Adjust description font size */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for tablets */
+  .car-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust styles for smartphones */
+  .car-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
